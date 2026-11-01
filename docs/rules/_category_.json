@@ -1,8 +1,9 @@
 {
-  "label": "Правила",
+  "label": "📕 Правила",
   "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "Все правила для всех серверов и плащадок."
+    "description": "Все правила для всех серверов и плащадок.",
+    "slug": "/rules"
   }
 }
