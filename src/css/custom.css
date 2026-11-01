@@ -28,3 +28,33 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Отступ для якорных ссылок, чтобы шапка не перекрывала текст */
+.anchor-fix {
+  scroll-margin-top: 80px; /* примерная высота шапки Docusaurus, можно увеличить до 100px */
+  display: inline-block;
+}
+
+/* Отступ для якорных ссылок (который мы добавили ранее) */
+.anchor-fix {
+  scroll-margin-top: 80px; 
+  display: inline-block;
+}
+
+/* Анимация плавной подсветки */
+@keyframes highlight-flash {
+  0% {
+    background-color: rgba(255, 193, 7, 0.3); /* Мягкий желтый цвет */
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Находим абзац (p), внутри которого есть активный якорь, и подсвечиваем его */
+p:has(.anchor-fix:target) {
+  animation: highlight-flash 2.5s ease-out; /* Подсветка будет длиться 2.5 секунды */
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin-left: -8px; /* Компенсируем padding, чтобы текст визуально не съезжал */
+}
